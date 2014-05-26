@@ -1,7 +1,9 @@
 <h1>List of stories</h1>
 
-<% @stories.each do |flat| %>
+<% @stories.each do |story| %>
 
-<h2><%= story.title %></h2>
+  <%= link_to story_path(story) do %>
+    <h2><%= story.title %></h2>
+  <% end %>
 
-<%end%>
+<% end %>

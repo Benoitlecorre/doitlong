@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default" role="navigation">
+
+  <div class="container-fluid">
+
+    <div class="navbar-brand">
+      <%= link_to(image_tag("lemur.png", :alt => "logo", :title => "Home"), "/", :class=>"logo") %>
+      <%= link_to "Do it long!", stories_path %>
+
+    </div>
+
+    <div class="navbar-left"><!--undefined class-->
+      <ul class="nav navbar-nav">
+      <% if author_signed_in? %>
+      <li><strong><%= current_author.email %></strong></li>
+      <li><%= link_to 'Edit profile', edit_author_registration_path %></li>
+      <li><%= link_to "Logout", destroy_author_session_path, method: :delete  %></li>
+      <% else %>
+      <li><%= link_to "Sign up", new_author_registration_path %></li>
+      <li><%= link_to "Login", new_author_session_path  %></li>
+      <% end %>
+      </ul>
+    </div>
+
+    <div class="navbar-right">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Create a story", new_story_path %></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+</nav>

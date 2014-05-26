@@ -1,3 +1,17 @@
 <h1><%= @story.title %></h1>
 
 <p><%= @story.body %></p>
+
+<% if author_signed_in? %>
+      <%= link_to edit_story_path(@story) do %>
+      <button class="btn btn-info invert">Editer l'annonce</button>
+      <% end %>
+
+      <%= link_to story_path(@story), method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <button class="btn btn-info invert">Supprimer l'annonce</button>
+  <% end %>
+<% end %>
+
+<%= link_to stories_path do %>
+  <button class="btn btn-default invert">Retour à la liste des stories</button>
+<% end %>

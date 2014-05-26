@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :authors
   root 'stories#index'
 
   resources :stories

@@ -1,5 +1,6 @@
 class StoriesController < ApplicationController
-  before_action :set_flat, only: [:show, :edit, :update, :destroy]
+  before_action :set_story, only: [:show, :edit, :update, :destroy]
+  respond_to :js, :html
 
 
   def index
@@ -7,7 +8,7 @@ class StoriesController < ApplicationController
   end
 
   def show
-    #before_action :set_flat
+    #before_action :set_story
   end
 
   def new
@@ -15,7 +16,7 @@ class StoriesController < ApplicationController
   end
 
   def edit
-    #before_action :set_flat
+    #before_action :set_story
   end
 
   def create
@@ -25,12 +26,16 @@ class StoriesController < ApplicationController
   end
 
   def update
-    #before_action :set_flat
+    #before_action :set_story
     @story.update!(story_params)
+    respond_with do |format|
+      format.js
+      format.html { redirect_to story_path(@story) }
+    end
   end
 
   def destroy
-    #before_action :set_flat
+    #before_action :set_story
     @story.destroy
 
     redirect_to stories_path

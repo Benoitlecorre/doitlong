@@ -1,2 +1,5 @@
-<h1>Stories#edit</h1>
-<p>Find me in app/views/stories/edit.html.erb</p>
+<%= render 'stories/form' %>
+
+<%= link_to story_path do %>
+  <button class="btn btn-default invert">Retour à la liste des stories</button>
+<% end %>
