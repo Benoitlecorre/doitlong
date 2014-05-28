@@ -1,11 +1,48 @@
-<%= form_for @story do |form|  %>
-  <div class="form-group">
-  <%= form.label :title, 'Title' %>
-  <%= form.text_field :title%>
+
+<%= form_for @story do |f| %>
+
+<div class="row">
+
+  <div id="main_container">
+
+    <div class="col-md-2">
+      <div id="container_left">
+        <div class="editable">
+          <p>Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening. </p>
+        </div>
+      </div><!-- container_right ending -->
+    </div>
+
+    <div class="col-md-8">
+      <div id="container_center">
+        <div class="editable">
+          <h1>Title</h1>
+          <p>Write your story</p>
+          <p>Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening. At such a time I found out for certain that this bleak place overgrown with nettles was the churchyard; and that Philip Pirrip, late of this parish, and also Georgiana wife of the above, were dead and buried; and that Alexander, Bartholomew, Abraham, Tobias, and Roger, infant children of the aforesaid, were also dead and buried; and that the dark flat wilderness beyond the churchyard, intersected with dikes and mounds and gates, with scattered cattle feeding on it, was the marshes; and that the low leaden line beyond was the river; and that the distant savage lair from which the wind was rushing was the sea; and that the small bundle of shivers growing afraid of it all and beginning to cry, was Pip.</p>
+        </div>
+      </div><!-- container_center ending -->
+    </div>
+
+    <div class="col-md-2">
+      <div id="container_left">
+        <div class="editable">
+          <p>Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening.</p>
+        </div>
+      </div><!-- container_left ending -->
+    </div>
+
+  </div><!-- main_container ending -->
+
+</div><!-- row ending -->
+
+<div class="row">
+  <div class="text-center">
+  <%= f.submit "Create", class: "btn btn-primary submit_story" %>
   </div>
-  <div class="form-group">
-  <%= form.label :body, 'Body' %>
-  <%= form.text_field :body%>
-  </div>
-  <%= form.submit%>
+</div>
+
+<%= f.hidden_field :title, class: "title_story_field" %>
+<%= f.hidden_field :body, class: "story_field" %>
+
 <% end %>
+
