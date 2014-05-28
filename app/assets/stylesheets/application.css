@@ -28,9 +28,8 @@ body {
     line-height: 30px;
 }
 
-#container {
-    width: 960px;
-    margin: 30px auto;
+#container_left, #container_right {
+  margin-top:100px;
 }
 
 h1 {
@@ -40,7 +39,6 @@ h1 {
     margin-bottom: 40px;
     padding-bottom: 40px;
     letter-spacing: -2px;
-    border-bottom: 1px solid #dbdbdb;
 }
 
 p {
@@ -67,7 +65,6 @@ blockquote {
     outline: none;
     margin: 0 0 20px 0;
     padding: 0 0 20px 0;
-    border-bottom: 1px solid #dbdbdb;
 }
 
 pre {
@@ -81,10 +78,11 @@ pre {
 }
 
 #container {
-    width: 960px;
-    margin: 30px auto;
 }
 
+#main_container{
+  width:1024px;
+}
 
 h3 {
     font-size: 32px;
