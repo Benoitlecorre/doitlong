@@ -3,9 +3,9 @@
   <div class="container-fluid">
 
     <div class="navbar-brand">
-      <%= link_to(image_tag("lemur.png", :alt => "logo", :title => "Home"), "/", :class=>"logo") %>
-      <%= link_to "Do it long!", stories_path %>
-
+      <%= link_to stories_path do %>
+        <%= image_tag "lemur.png", id: "logo"%>
+      <% end %>
     </div>
 
     <div class="navbar-left"><!--undefined class-->
