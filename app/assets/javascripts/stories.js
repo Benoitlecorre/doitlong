@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 var editor = new MediumEditor('.editable', {
     anchorInputPlaceholder: 'Type a link',
     buttons: ['bold', 'italic', 'underline', 'anchor', 'header1', 'header2', 'quote'],
@@ -12,8 +14,12 @@ var editor = new MediumEditor('.editable', {
 
 
 $('.submit_story').on("click", function(){
-  $('.title_story_field').val($('#container h1').text());
-  $('.story_field').val($('#main_container').html());
-
+  $('.title_story_field').val($('#one').text());
+  $('.container_left_field').val($('#content_left').html());
+  $('.container_center_field').val($('#content_center').html());
+  $('.container_right_field').val($('#content_right').html());
 });
+
+
+})
 

@@ -1,9 +1,20 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1><%= @story.title %></h1>
+  </div>
+</div>
 
-
-<h1><%= @story.title %></h1>
-
-<p><%= @story.body %></p>
-
+<div class="row">
+  <div class="col-md-2">
+  <%= raw @story.container_left %>
+  </div>
+  <div class="col-md-8">
+  <%= raw @story.container_center %>
+  </div>
+  <div class="col-md-2">
+  <%= raw @story.container_right %>
+  </div>
+</div>
 
 
 <% if author_signed_in? %>
@@ -19,3 +30,4 @@
 <%= link_to stories_path do %>
   <button class="btn btn-default invert">Retour à la liste des stories</button>
 <% end %>
+
