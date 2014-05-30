@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
@@ -34,10 +34,13 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-debugger'
+  gem 'meta_request'
+  gem 'quiet_assets'
 end
 
-gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'paperclip'
 gem 'aws-sdk'
+gem 'rails-assets-medium-editor-insert-plugin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
