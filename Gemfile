@@ -30,6 +30,15 @@ gem 'devise'
 
 gem 'figaro'
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-debugger'
+end
+
+gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

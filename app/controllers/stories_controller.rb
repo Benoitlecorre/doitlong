@@ -2,7 +2,6 @@ class StoriesController < ApplicationController
   before_action :set_story, only: [:show, :edit, :update, :destroy]
   respond_to :js, :html
 
-
   def index
     @stories = Story.all
   end
@@ -13,14 +12,18 @@ class StoriesController < ApplicationController
 
   def new
     @story = Story.new
+
   end
 
   def edit
     #before_action :set_story
+
+
   end
 
   def create
     story = Story.create(story_params)
+    # story.pictures.create(story_params[:pictures]) if (story_params[:pictures]).blank?
 
     redirect_to story_path(story)
   end
@@ -28,6 +31,8 @@ class StoriesController < ApplicationController
   def update
     #before_action :set_story
     @story.update!(story_params)
+    @story.pictures.create(story_params[:pictures]) if !(story_params[:pictures]).blank?
+
     respond_with do |format|
       format.js
       format.html { redirect_to story_path(@story) }
@@ -48,7 +53,9 @@ class StoriesController < ApplicationController
   end
 
   def story_params
-    params.require(:story).permit(:title, :body, :container_left, :container_center, :container_right )
+    params.require(:story).permit(:title, :body, :container_left, :container_center, :container_right,
+                                  pictures_attributes: [:picture])
   end
+
 
 end
