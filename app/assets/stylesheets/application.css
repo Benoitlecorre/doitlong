@@ -15,6 +15,17 @@
  *= require_self
  */
 
+.container {
+  width:1024px;
+}
+
+.paper {
+  border-top:dashed 1px #999;
+  border-left:dashed 1px #999;
+  border-right:dashed 1px #999;
+  border-radius:4px;
+  padding:50px;
+}
 
 *:focus {
     outline: none;
@@ -60,7 +71,7 @@ h1, h2, h3, h4, .btn{
 
 
 p {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding-bottom:18px;
     font-size:17px;
     line-height: 28px;
@@ -75,10 +86,12 @@ p {
 
 a {
     color:black;
+
 }
 
 a:hover {
     color:#987ec4;
+    text-decoration: none;
 }
 
 blockquote {
@@ -166,6 +179,7 @@ background-color:#987ec4;
 }
 
 
+
 #logo{
   height:40px;
   position:relative;
@@ -182,8 +196,8 @@ background-color:#987ec4;
   position:relative;
   top:-13px;
   color:#777;
-  text-decoration: none;
 }
+
 
 .navbar {
   background-color: #ffffff;

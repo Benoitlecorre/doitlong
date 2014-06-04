@@ -1,7 +1,9 @@
 <%= form_for @story, :html => { :multipart => true } do |f| %>
 
+<div class="paper">
+
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-12 text-center">
     <div class="editable">
       <p class="first"></p>
       <h1 id="one">Here write your title</h1>
@@ -18,7 +20,7 @@
     </div><!-- contain_left ending -->
   </div>
 
-  <div class="col-md-7">
+  <div class="col-md-8">
     <div class="editable" id="content_center">
       <p>Here is your main content</p>
     </div><!-- contain_center ending -->
@@ -39,6 +41,7 @@
 
 </div><!-- row ending -->
 
+</div>
 
 <div class="row">
   <div class="col-md-12">
@@ -50,4 +53,6 @@
 
 
 <% end %>
+
+
 
