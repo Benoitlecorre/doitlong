@@ -40,7 +40,7 @@ end
 
 gem 'paperclip'
 gem 'aws-sdk'
-gem 'rails-assets-medium-editor-insert-plugin'
+#gem 'rails-assets-medium-editor-insert-plugin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

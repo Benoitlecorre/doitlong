@@ -31,7 +31,7 @@ class StoriesController < ApplicationController
   def update
     #before_action :set_story
     @story.update!(story_params)
-    @story.pictures.create(story_params[:pictures]) if !(story_params[:pictures]).blank?
+    @story.pictures.create(story_params[:pictures]) unless (story_params[:pictures]).blank?
 
     respond_with do |format|
       format.js

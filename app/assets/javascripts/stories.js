@@ -13,6 +13,7 @@ $(document).ready(function(){
 
     $('.submit_story').on("click", function(){
         $('.title_story_field').val($('#one').text());
+        $('.subtitle_story_field').val($('#subtitle').text());
         $('.container_left_field').val($('#content_left').html());
         $('.container_center_field').val($('#content_center').html());
         $('.container_right_field').val($('#content_right').html());
@@ -21,9 +22,16 @@ $(document).ready(function(){
     $('.editable').mediumInsert({
         editor: editor,
         addons: {
-            images: {imageUploadScript: "/stories/1"},
+            images: {
+              imagesUploadScript: "/pictures/create"
+            },
             embeds: {}
-        }
+        },
     });
 })
 
+// Problème N°1 : faire afficher l'image dans une story grâce au plugin
+// Problème N°2 : faire apparaitre plusieurs images dans une story
+// Problème N°3 : Pimper la barre de WYSIWYG / Pimper le bouton
+// Problème N°4 : Changer le design d'ensemble + son logo (voir Nike chaussures)
+// Problème N°5 : Résoudre le problème : Et pour avoir plusieurs divs sur les côtés ?

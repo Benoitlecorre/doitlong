@@ -29,17 +29,36 @@ body {
     line-height: 30px;
 }
 
-h1 {
-    font-size: 60px;
+h1{
+  font-size: 80px;
     font-weight: bold;
     text-align: center;
     letter-spacing: -2px;
-    padding-bottom:40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#one{
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#subtitle{
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: -1px;
     margin-bottom: 40px;
+    text-transform: capitalize;
 }
 
 p {
     margin-bottom: 40px;
+    font-size:17px;
 }
 
 a {
@@ -90,4 +109,8 @@ blockquote {
     padding-left: 15px;
     font-style: italic;
     color: #555;
+}
+
+.submit_story {
+margin-top:200px;
 }
