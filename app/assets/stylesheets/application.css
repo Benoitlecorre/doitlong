@@ -11,13 +11,10 @@
  * file per style scope.
  *
  *= require_tree .
- *= require_self
  *= require medium-editor-insert-plugin
+ *= require_self
  */
 
-#logo{
- height: 100%;
-}
 
 *:focus {
     outline: none;
@@ -29,44 +26,59 @@ body {
     line-height: 30px;
 }
 
-h1{
-  font-size: 80px;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: -2px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+h1, h2, h3, h4, .btn{
+  font-family: 'Source Sans Pro', sans-serif;
+  color:#333;
 }
+
+/* FORM ARTICLE */
 
 #one{
-    font-size: 80px;
+    /**border : solid 2px #666;
+    border-radius: 4px;**/
+    font-size: 60px;
     font-weight: bold;
-    text-align: center;
     letter-spacing: -2px;
     margin-bottom: 10px;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    padding:5px;
+    line-height: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
+
 #subtitle{
+    /**border : solid 2px #666;
+    border-radius: 4px;**/
     font-size: 40px;
-    font-weight: lighter;
-    text-align: center;
     letter-spacing: -1px;
     margin-bottom: 40px;
     text-transform: capitalize;
+    padding:5px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
+
 
 p {
     margin-bottom: 40px;
+    padding-bottom:18px;
     font-size:17px;
+    line-height: 28px;
+    color:#444;
 }
+
+.first{
+  padding:0;
+  margin:0;
+}
+
 
 a {
     color:black;
 }
 
 a:hover {
-    color:green;
+    color:#987ec4;
 }
 
 blockquote {
@@ -86,8 +98,6 @@ pre {
     font-size: 15px;
     background-color: #f0f0f0;
     padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     color: #666;
 }
 
@@ -95,6 +105,7 @@ pre {
 h3 {
     font-size: 32px;
     line-height: 42px;
+    padding-bottom: 40px;
 }
 
 h4 {
@@ -111,6 +122,103 @@ blockquote {
     color: #555;
 }
 
+/* BUTTONS */
+
 .submit_story {
 margin-top:200px;
 }
+
+.btn {
+  border:solid 2px #83c47e;
+  border-radius: 4px;
+  background-color: white;
+  font-size:20px;
+  color:#83c47e;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color:#83c47e;
+  color:white;
+  border:solid 2px #83c47e;
+
+}
+
+.btn-default {
+border-color:#987ec4;
+  background-color: white;
+  color:#987ec4;
+
+}
+
+.btn-default:hover{
+background-color:#987ec4;
+  color:white;
+  border:solid 2px #987ec4;
+}
+
+/* HEADER */
+
+.navbar-brand{
+  border-bottom: solid 5px #999;
+  position:relative;
+  bottom:-5px;
+}
+
+
+#logo{
+  height:40px;
+  position:relative;
+  top:-16px;
+}
+
+.navbar-brand span {
+  position:relative;
+  top:-13px;
+  color:#777;
+}
+
+.navbar-brand>span>a{
+  position:relative;
+  top:-13px;
+  color:#777;
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: #ffffff;
+  height:60px;
+  margin-bottom: 50px;
+  margin-left:10px;
+  font-size:19px;
+  font-family: 'Source Sans Pro', sans-serif;
+  border:0;/*correction bootstrap*/
+  border-radius: 0;/*correction bootstrap*/
+}
+
+.navbar-default .navbar-left .navbar-nav>li>a {
+color:#987ec4;
+}
+
+.navbar-default .navbar-right .navbar-nav>li>a {
+color:#83c47e;
+}
+
+.navbar-left, .navbar-right{
+  margin-top: 5px;
+}
+
+.navbar-left li {
+  border-bottom: solid 5px #987ec4;
+}
+
+.navbar-right li {
+  border-bottom: solid 5px #83c47e;
+}
+
+.navbar-left li a:hover, .navbar-right li a:hover  {
+  border-bottom: solid 5px white;
+}
+
+
+

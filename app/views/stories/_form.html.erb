@@ -1,9 +1,10 @@
 <%= form_for @story, :html => { :multipart => true } do |f| %>
 
 <div class="row">
-  <div class="col-md-12 text-center">
+  <div class="col-md-12">
     <div class="editable">
-      <h1 id="one">Here you write your story</h1>
+      <p class="first"></p>
+      <h1 id="one">Here write your title</h1>
       <h2 id="subtitle">Here write your subtitle </h2>
     </div>
   </div>
@@ -17,10 +18,9 @@
     </div><!-- contain_left ending -->
   </div>
 
-  <div class="col-md-8">
+  <div class="col-md-7">
     <div class="editable" id="content_center">
       <p>Here is your main content</p>
-      <p>Don't hesitate to enter photo</p>
     </div><!-- contain_center ending -->
   </div>
 
@@ -31,23 +31,14 @@
   </div>
 
 
-  <%= f.hidden_field :title, class: "title_story_field" %>
-  <%= f.hidden_field :subtitle, class: "subtitle_story_field" %>
-  <%= f.hidden_field :container_left, class: "container_left_field" %>
-  <%= f.hidden_field :container_center, class: "container_center_field" %>
-  <%= f.hidden_field :container_right, class: "container_right_field" %>
+  <%= f.hidden_field :title, :placeholder => "Enter your title", class: "title_story_field" %>
+  <%= f.hidden_field :subtitle, :placeholder => "Enter your title", class: "subtitle_story_field" %>
+  <%= f.hidden_field :container_left, :placeholder => "Enter your text", class: "container_left_field" %>
+  <%= f.hidden_field :container_center, :placeholder => "Enter your text", class: "container_center_field" %>
+  <%= f.hidden_field :container_right, :placeholder => "Enter your text", class: "container_right_field" %>
 
 </div><!-- row ending -->
 
-<!--<div class="row">
-  <div class="col-md-12">
-    <%= f.fields_for :pictures, @story.pictures.build do |picture_form| %>
-      <%= picture_form.label :picture %>
-      <%= picture_form.file_field :picture %>
-      <%= picture_form.text_field :picture_file_name %>
-    <% end %>
-  </div>
-</div><-->
 
 <div class="row">
   <div class="col-md-12">

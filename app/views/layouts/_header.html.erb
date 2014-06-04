@@ -2,13 +2,16 @@
 
   <div class="container-fluid">
 
-    <div class="navbar-brand">
-      <%= link_to stories_path do %>
-        <%= image_tag "lemur.png", id: "logo"%>
-      <% end %>
-    </div>
 
-    <div class="navbar-left"><!--undefined class-->
+
+    <div class="navbar-left">
+      <div class="navbar-brand">
+      <%= link_to stories_path do %>
+        <%= image_tag "unicorn.png", id: "logo"%>
+        <span>Do It Long !</span>
+      <% end %>
+
+    </div>
       <ul class="nav navbar-nav">
       <% if author_signed_in? %>
       <li><strong><%= current_author.email %></strong></li>
