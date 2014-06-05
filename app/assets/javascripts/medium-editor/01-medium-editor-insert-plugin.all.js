@@ -628,6 +628,10 @@
       }
     },
 
+    /**PATCHER THAT le gif à la place de l'image tant que.
+    Monkey Patch => ouvrir une classe et la modifier à la volée de l'ext
+    **/
+
     /**
     * Show uploaded image after upload completed
     *

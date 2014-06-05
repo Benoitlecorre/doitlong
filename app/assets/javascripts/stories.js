@@ -2,11 +2,8 @@ $(document).ready(function(){
     var editor = new MediumEditor('.editable', {
         anchorInputPlaceholder: 'Type a link',
         buttons: ['bold', 'italic', 'underline', 'anchor', 'header1', 'header2', 'quote'],
-        diffLeft: 25,
-        diffTop: 10,
         firstHeader: 'h3',
         secondHeader: 'h4',
-        delay: 1000,
         buttonLabels: 'fontawesome',
         targetBlank: true
     });
