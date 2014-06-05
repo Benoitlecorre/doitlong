@@ -8,6 +8,11 @@ class StoriesController < ApplicationController
 
   def show
     #before_action :set_story
+    if params[:iframe]
+      render layout: 'embed'
+      @story.embed = true
+      raise
+    end
   end
 
   def new
