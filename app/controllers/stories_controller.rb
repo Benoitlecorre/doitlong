@@ -8,6 +8,9 @@ class StoriesController < ApplicationController
 
   def show
     #before_action :set_story
+    if params[:iframe]
+      render layout: 'embed'
+    end
   end
 
   def new
@@ -31,7 +34,7 @@ class StoriesController < ApplicationController
   def update
     #before_action :set_story
     @story.update!(story_params)
-    @story.pictures.create(story_params[:pictures]) if !(story_params[:pictures]).blank?
+    @story.pictures.create(story_params[:pictures]) unless (story_params[:pictures]).blank?
 
     respond_with do |format|
       format.js
@@ -53,7 +56,7 @@ class StoriesController < ApplicationController
   end
 
   def story_params
-    params.require(:story).permit(:title, :body, :container_left, :container_center, :container_right,
+    params.require(:story).permit(:title, :subtitle, :container_left, :container_center, :container_right,
                                   pictures_attributes: [:picture])
   end
 

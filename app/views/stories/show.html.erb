@@ -1,6 +1,7 @@
 <div class="row">
-  <div class="col-md-12">
-    <h1><%= @story.title %></h1>
+  <div class="col-md-12 text-center">
+    <h1 id="one"><%= @story.title %></h1>
+    <h2 id="subtitle"><%= @story.subtitle %></h2>
   </div>
 </div>
 
@@ -16,28 +17,40 @@
   </div>
 </div>
 
-<div class="row">
+<% unless params[:iframe] %>
 
-  <% @story.pictures.each do |picture| %>
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <div class="iframe-link">
+        <p>http://localhost:3000/stories/<%= @story.id %>?iframe=true</p>
+      </div>
+    </div>
+  </div>
 
-    <%= image_tag picture.picture.url(:medium) %>
+
+  <% if author_signed_in? %>
+    <% content_for :edit do %>
+      <%= link_to edit_story_path(@story) do %>
+        <span>Edit story</span>
+      <% end %>
+    <% end %>
+
+    <% content_for :delete do %>
+      <%= link_to story_path(@story), method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <span>Delete story</span>
+      <% end %>
+    <% end %>
 
   <% end %>
 
-</div>
 
 
-<% if author_signed_in? %>
-<%= link_to edit_story_path(@story) do %>
-<button class="btn btn-info invert">Editer l'annonce</button>
 <% end %>
 
-<%= link_to story_path(@story), method: :delete, data: { confirm: 'Are you sure?' } do %>
-<button class="btn btn-info invert">Supprimer l'annonce</button>
-<% end %>
-<% end %>
 
-<%= link_to stories_path do %>
-<button class="btn btn-default invert">Retour à la liste des stories</button>
-<% end %>
 
+<script>
+$(document).ready(function(){
+  $( ".mediumInsert-buttons" ).remove();
+});
+</script>

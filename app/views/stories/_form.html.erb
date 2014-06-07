@@ -1,10 +1,13 @@
-
 <%= form_for @story, :html => { :multipart => true } do |f| %>
 
+<div class="paper">
+
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-12 text-center">
     <div class="editable">
-      <h1 id="one">Here you write your story</h1>
+      <p class="first"></p>
+      <h1 id="one">Here write your title</h1>
+      <h2 id="subtitle">Here write your subtitle </h2>
     </div>
   </div>
 </div>
@@ -13,40 +16,33 @@
 
   <div class="col-md-2">
     <div class="editable" id="content_left">
-      <p>Our was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening.</p>
+      <p>Type here your additional contents</p>
     </div><!-- contain_left ending -->
   </div>
 
   <div class="col-md-8">
     <div class="editable" id="content_center">
-      <p>Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening. At such a time I found out for certain that this bleak place overgrown with nettles was the churchyard; and that Philip Pirrip, late of this parish, and also Georgiana wife of the above, were dead and buried; and that Alexander, Bartholomew, Abraham, Tobias, and Roger, infant children of the aforesaid, were also dead and buried; and that the dark flat wilderness beyond the churchyard, intersected with dikes and mounds and gates, with scattered cattle feeding on it, was the marshes; and that the low leaden line beyond was the river; and that the distant savage lair from which the wind was rushing was the sea; and that the small bundle of shivers growing afraid of it all and beginning to cry, was Pip.</p>
+      <p>Here is your main content</p>
     </div><!-- contain_center ending -->
   </div>
 
   <div class="col-md-2">
     <div class="editable" id="content_right">
-      <p>Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening.</p>
+      <p>Type here your additional contents</p>
     </div><!-- contain_left ending -->
   </div>
 
 
-  <%= f.hidden_field :title, class: "title_story_field" %>
-
-  <%= f.hidden_field :container_left, class: "container_left_field" %>
-  <%= f.hidden_field :container_center, class: "container_center_field" %>
-  <%= f.hidden_field :container_right, class: "container_right_field" %>
+  <%= f.hidden_field :title, :placeholder => "Enter your title", class: "title_story_field" %>
+  <%= f.hidden_field :subtitle, :placeholder => "Enter your title", class: "subtitle_story_field" %>
+  <%= f.hidden_field :container_left, :placeholder => "Enter your text", class: "container_left_field" %>
+  <%= f.hidden_field :container_center, :placeholder => "Enter your text", class: "container_center_field" %>
+  <%= f.hidden_field :container_right, :placeholder => "Enter your text", class: "container_right_field" %>
 
 </div><!-- row ending -->
 
-<div class="row">
-  <div class="col-md-12">
-    <%= f.fields_for :pictures, @story.pictures.build do |picture_form| %>
-      <%= picture_form.label :picture %>
-      <%= picture_form.file_field :picture %>
-      <%= picture_form.text_field :picture_file_name %>
-    <% end %>
-  </div>
 </div>
+
 
 <div class="row">
   <div class="col-md-12">
@@ -57,5 +53,8 @@
 </div>
 
 
+
 <% end %>
+
+
 
