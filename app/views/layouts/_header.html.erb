@@ -26,8 +26,10 @@
 
     <div class="navbar-right">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Create a story", new_story_path %></li>
-        <%= content_for :actions %>
+        <li id="delete"><%= content_for :delete %></li>
+        <li id="edit"><%= content_for :edit %></li>
+        <li><%= link_to "Start a new story", new_story_path, id: "create" %></li>
+        </ul>
       </ul>
     </div>
 

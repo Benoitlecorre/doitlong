@@ -17,8 +17,6 @@
   </div>
 </div>
 
-
-
 <% unless params[:iframe] %>
 
   <div class="row">
@@ -29,26 +27,25 @@
     </div>
   </div>
 
-  <% content_for :actions do %>
 
   <% if author_signed_in? %>
-  <%= link_to edit_story_path(@story) do %>
-  <button class="btn btn-info invert">Editer l'annonce</button>
+    <% content_for :edit do %>
+      <%= link_to edit_story_path(@story) do %>
+        <span>Edit story</span>
+      <% end %>
+    <% end %>
+
+    <% content_for :delete do %>
+      <%= link_to story_path(@story), method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <span>Delete story</span>
+      <% end %>
+    <% end %>
+
   <% end %>
 
-  <%= link_to story_path(@story), method: :delete, data: { confirm: 'Are you sure?' } do %>
-  <button class="btn btn-info invert">Supprimer l'annonce</button>
-  <% end %>
-  <% end %>
 
-  <%= link_to stories_path do %>
-  <button class="btn btn-default invert">Retour à la liste des stories</button>
-  <% end %>
-
-  <%end%>
 
 <% end %>
-
 
 
 

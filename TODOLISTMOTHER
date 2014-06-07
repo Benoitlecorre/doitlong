@@ -15,7 +15,12 @@ n°5 : S'occuper de l'export d'histoires / Essayer les embeds
 
 -> Il faut que j'exporte du CSS
 
--> EXPORTER LE CSS EN IFRAME
--> S'OCCUPER DU LOADER DEGUEUALSSE
--> VIRER LES TRUCS DEGUEU LORS DU SHOW /OK
--> EDIT
+
+-> LOADER DEGUELASSE
+-> BOUTON QUAND TU CLICKES
+-> ENCADRES
+-> RESIZE IMAGE CENTRALE
+-> CRUD EDIT
+
+<iframe name="leurrevolution" src="http://gurvankris.com/do-it-long/revolution/">
+</iframe>

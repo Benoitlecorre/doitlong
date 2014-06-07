@@ -137,31 +137,32 @@ blockquote {
 
 /* BUTTONS */
 
-.submit_story {
-margin-top:200px;
-}
+
 
 .btn {
-  border:solid 2px #83c47e;
-  border-radius: 4px;
-  background-color: white;
   font-size:20px;
   color:#83c47e;
   font-weight: 500;
+
 }
 
-.btn:hover {
+.submit_story {
   background-color:#83c47e;
   color:white;
-  border:solid 2px #83c47e;
+  border:solid 5px #83c47e;
+  border-radius: 0;
+}
 
+.submit_story:hover{
+  background-color:white;
+  color:#83c47e;
+  border-color:#83c47e;
 }
 
 .btn-default {
-border-color:#987ec4;
+  border-color:#987ec4;
   background-color: white;
   color:#987ec4;
-
 }
 
 .btn-default:hover{
@@ -177,8 +178,6 @@ background-color:#987ec4;
   position:relative;
   bottom:-5px;
 }
-
-
 
 #logo{
   height:40px;
@@ -214,9 +213,6 @@ background-color:#987ec4;
 color:#987ec4;
 }
 
-.navbar-default .navbar-right .navbar-nav>li>a {
-color:#83c47e;
-}
 
 .navbar-left, .navbar-right{
   margin-top: 5px;
@@ -248,4 +244,24 @@ color:#83c47e;
   font-weight: 600;
   padding:10px;
   text-align:center;
+}
+
+#create{
+  color:#83c47e;
+}
+
+#edit{
+  border-bottom: solid 5px #f5b46e;
+}
+
+#edit span{
+  color:#f5b46e;
+}
+
+#delete{
+  border-bottom: solid 5px #c36666;
+}
+
+#delete span{
+  color:#c36666;
 }
