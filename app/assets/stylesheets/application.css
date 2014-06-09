@@ -234,7 +234,7 @@ color:#987ec4;
   margin-top:50px;
 }
 
-.iframe-link p {
+.my_clip_button {
   font-family: 'Source Sans Pro', sans-serif;
   border:solid 2px #987ec4;
   border-radius: 4px;
@@ -242,8 +242,14 @@ color:#987ec4;
   font-size:17px;
   color:white;
   font-weight: 600;
+  margin-top:100px;
   padding:10px;
   text-align:center;
+  }
+
+.my_clip_button:hover {
+  background-color: white;
+  color:#987ec4;
 }
 
 #create{

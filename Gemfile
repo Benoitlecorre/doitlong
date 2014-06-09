@@ -40,6 +40,8 @@ end
 
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'zeroclipboard-rails'
+
 #gem 'rails-assets-medium-editor-insert-plugin'
 
 # Use ActiveModel has_secure_password
