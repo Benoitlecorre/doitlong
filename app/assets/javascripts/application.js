@@ -15,4 +15,5 @@
 //= require_tree .
 //= require medium-editor/00-medium-editor
 //= require medium-editor/01-medium-editor-insert-plugin.all
+//= require zeroclipboard
 
